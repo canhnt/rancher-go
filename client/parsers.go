@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/golang/glog"
+	"github.com/Sirupsen/logrus"
 	"github.com/tidwall/gjson"
 )
 
@@ -47,7 +47,7 @@ func parseEntities(jsonData string, jsonPath string) []Entity {
 		name := value.Get("name").String()
 		id := value.Get("id").String()
 		if name == "" || id == "" {
-			glog.Errorf("Either cluster name or id is empty: name='%s', id='%s'", name, id)
+			logrus.Errorf("Either cluster name or id is empty: name='%s', id='%s'", name, id)
 			return true // continue next item
 		}
 		entities = append(entities, Entity{ID: id, Name: name})

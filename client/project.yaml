@@ -1,0 +1,54 @@
+projects:
+  - id: "prj-1234"
+    name: "demo-project1"
+    description: "1st project storing in YAML file"
+    podSecurityPolicyId: tcloud
+    members:
+      - type: Group
+        principalId: openldap_group://cn=developers,ou=Groups,dc=example
+        roleTemplateId: project-member
+      - type: Group
+        principalId: openldap_group://cn=testers,ou=Groups,dc=example
+        roleTemplateId: rt-123
+      - type: User
+        principalId: openldap_user://cn=canh,ou=Groups,dc=example
+        roleTemplateId: project-owner
+    projectQuotas:
+      project:
+        limitsCpu: '2500m'
+        limitsMemory: '4096Mi'
+        requestsCpu: 1200m
+        requestsMemory: 2048Mi
+        requestsStorage: 80Gi
+      namespace:
+        limitsCpu: 500m
+        limitsMemory: 1Gi
+        requestsCpu: 200m
+        requestsMemory: 512Mi
+        requestsStorage: 20Gi
+  - name: "demo-project2"
+    description: "2nd project storing in YAML file"
+    podSecurityPolicyId: tcloud
+    members:
+      - type: Group
+        principalId: openldap_group://cn=developers,ou=Groups,dc=example
+        roleTemplateId: project-member
+      - type: Group
+        principalId: openldap_group://cn=testers,ou=Groups,dc=example
+        roleTemplateId: rt-123
+      - type: User
+        principalId: openldap_user://cn=canh,ou=Groups,dc=example
+        roleTemplateId: project-owner
+    projectQuotas:
+      project:
+        limitsCpu: '2500m'
+        limitsMemory: '4096Mi'
+        requestsCpu: 1200m
+        requestsMemory: 2048Mi
+        requestsStorage: 80Gi
+      namespace:
+        limitsCpu: 500m
+        limitsMemory: 1Gi
+        requestsCpu: 200m
+        requestsMemory: 512Mi
+        requestsStorage: 20Gi
