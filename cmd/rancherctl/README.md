@@ -43,7 +43,7 @@ c-a1bcd:p-29bs7 	 Sandbox
 c-a1bcd:p-29qn8 	 BackendApp
 c-a1bcd:p-2kks9 	 Workflows
 c-a1bcd:p-2l2l4 	 Playground
-c-a1bcd:p-2wfqv    canhnt
+c-a1bcd:p-2wfqv 	 canhnt
 ```
 
 ### Get project detail
