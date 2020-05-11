@@ -1,4 +1,4 @@
-module github.com/canhnt/rancher-go/client
+module github.com/canhnt/rancher-go
 
 go 1.14
 
