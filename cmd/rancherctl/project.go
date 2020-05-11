@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	rancher "github.com/canhnt/rancher-go/client"
 	"github.com/urfave/cli"
 	"gopkg.in/yaml.v2"
